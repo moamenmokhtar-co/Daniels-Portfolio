@@ -1,0 +1,50 @@
+/* @media (max-width:1400px) {
+    
+} */
+
+
+@media (max-width:1200px) {
+    .our-team .card .image .layer .icon {
+        top: 65% !important;
+        left: 50% !important;
+        transform: translate(-50%, -65%) !important;
+    }
+}
+
+
+/* 
+@media (max-width:992px) {
+    
+} */
+
+
+@media (max-width:768px) {
+    .our-team .card .image .layer .icon {
+        top: 40% !important;
+        left: 50% !important;
+        transform: translate(-50%, -65%) !important;
+    }
+}
+
+@media (max-width:576px) {
+    .modal-dialog {
+        max-width: 40%;
+    }
+
+    .home-title p {
+        font-size: 1.7rem;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .carousel-control-prev {
+        left: 0;
+    }
+    
+    .carousel-control-next {
+        right: 0;
+    }
+}
+
+

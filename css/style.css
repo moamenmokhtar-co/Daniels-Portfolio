@@ -1,0 +1,580 @@
+:root {
+    --primary-color: #fff;
+    --secondry-color: #343434;
+    --third-color: #748182;
+    --button-color: #eeeeee;
+    --bg-button-color: #1c1c1c;
+    --bg-icon-color: #f4f4f4;
+    --bg-section-color: #f7f7f7;
+    --animation-dur: .5s;
+    --link-color: #111;
+}
+
+/* -- -----------------CUSTOM----------------- -- */
+
+
+.d-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-separating {
+    padding: 70px 0 100px;
+}
+
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    color: var(--third-color);
+}
+
+
+.btn {
+    transition: var(--animation-dur);
+    font-size: .8rem;
+    border: 1px solid var(--bg-button-color);
+}
+
+.btn-dark:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-button-color);
+    border-color: #373b3e;
+
+}
+
+
+.head-title {
+    font-size: 2.7rem;
+    color: var(--secondry-color);
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.head-title::before {
+    content: "";
+    background-image: url(../images/dots.png);
+    width: 100%;
+    height: 55%;
+    background-repeat: repeat;
+    background-position: center center;
+    position: absolute;
+    left: 0;
+    top: 55%;
+    z-index: -1;
+}
+
+@keyframes border-anim {
+    to {
+        right: 0;
+    }
+}
+
+@keyframes anim-95 {
+    to {
+        width: 95%;
+    }
+}
+
+@keyframes anim-80 {
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes anim-90 {
+    to {
+        width: 90%;
+    }
+}
+
+/* -- -----------------NAVBAR----------------- -- */
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-brand {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: var(--link-color);
+}
+
+.navbar-brand:hover {
+    color: var(--link-color);
+}
+
+.nav-link {
+    color: var(--link-color);
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--link-color);
+}
+
+.navbar-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 10px;
+    background-color: var(--link-color);
+    height: 2px;
+    transition: 1s;
+    animation: border-anim var(--animation-dur) forwards;
+}
+
+.nav-link:hover {
+    color: var(--link-color);
+}
+
+/* -- -----------------HOME----------------- -- */
+
+.home {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/bg.jpg);
+    background-position: center center, center center;
+    background-size: cover, cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.home-title {
+    color: var(--primary-color);
+}
+
+.home-title,
+.home-title p,
+.home-title p span {
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary-color);
+}
+
+
+.home-social i {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+
+/* -- -----------------ABOUT----------------- -- */
+
+
+.about .image {
+    max-width: 690px;
+}
+
+.about .image::before {
+    content: "";
+    background-image: url(../images/dots.png);
+    width: 90%;
+    height: 90%;
+    background-repeat: repeat;
+    background-position: center center;
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    z-index: -1;
+}
+
+
+.about-title p:first-of-type {
+    color: #999;
+}
+
+
+.bars div {
+    height: 1.8rem;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+
+}
+
+
+
+
+
+.bars div .progress-bar {
+    background-color: var(--bg-button-color);
+    width: 20%;
+    
+}
+
+.bars div .progress-bar.bar-1 {
+    animation: anim-95 1s forwards;
+}
+.bars div .progress-bar.bar-2 {
+    animation: anim-80 1s forwards;
+}
+.bars div .progress-bar.bar-3 {
+    animation: anim-90 1s forwards;
+}
+
+
+
+.bars div .progress-bar p {
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary-color);
+}
+
+
+/* -- -----------------SERVICES----------------- -- */
+
+
+.services {
+    background-color: var(--bg-section-color);
+}
+
+
+.services .ticket {
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+}
+
+.services .ticket:hover i {
+    background-color: var(--bg-button-color);
+    color: var(--button-color);
+
+}
+
+.services .ticket i {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-icon-color);
+    transition: var(--animation-dur);
+
+}
+
+.ticket-title {
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondry-color);
+    font-weight: 700;
+}
+
+.services .ticket p {
+    font-size: .9rem;
+}
+
+
+/* -- -----------------PORTFOLIO----------------- -- */
+
+
+.portfolio .ticket .inner {
+    overflow: hidden;
+}
+
+.portfolio .ticket .layer {
+    top: 15px;
+    right: 5px;
+    left: 5px;
+    bottom: -15px;
+    background-color: var(--primary-color);
+    transition: var(--animation-dur);
+    opacity: 0;
+}
+
+.portfolio .ticket .inner:hover .layer {
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    opacity: 1;
+}
+
+.portfolio .ticket .layer i {
+    width: 30px;
+    height: 30px;
+    background-color: #111111;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+.portfolio .ticket .layer i:hover {
+    background-color: var(--primary-color);
+    color: #111111;
+    border: 1px solid #111111;
+}
+
+
+li[role="presentation"] {
+    padding: 1rem .5rem;
+}
+
+.nav-link[data-bs-toggle="pill"] {
+    padding: 0;
+}
+
+.nav-pills .nav-link,
+.nav-pills .nav-link.active {
+    color: #222222;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link {
+    position: relative;
+}
+
+.nav-pills .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -5px;
+    background-color: var(--link-color);
+    height: 2px;
+    animation: border-anim var(--animation-dur) forwards;
+
+}
+
+
+
+
+
+/* -- -----------------TESTIMONIALS----------------- -- */
+
+.testimonials {
+    background-color: var(--bg-section-color);
+}
+
+
+
+.testimonials .image {
+    width: 90px;
+}
+
+
+.testimonials span {
+    color: #888;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.carousel-indicators {
+    bottom: -20px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    background-color: #d6d6d6;
+
+}
+
+
+.carousel-indicators .active {
+    background-color: #869791;
+}
+
+/* -- -----------------TEAM----------------- -- */
+
+
+.our-team {
+    background-color: var(--bg-section-color);
+}
+
+
+.our-team .card {
+    background-color: #5B5B5B;
+    color: var(--primary-color);
+}
+
+
+.our-team .card .image {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.our-team .card .image img {
+    transition: var(--animation-dur);
+
+}
+
+.our-team .card .image:hover img {
+    transform: scale(1.2);
+
+}
+
+.our-team .card .image .layer {
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    top: 100px;
+    transform: rotateY(180deg);
+    background-color: var(--primary-color);
+    transition: var(--animation-dur);
+    opacity: 0;
+}
+
+.our-team .card:hover .layer {
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    top: 5px;
+    transform: rotateY(0deg);
+    opacity: .9;
+}
+
+.our-team .card .image .layer i {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    color: var(--primary-color);
+}
+
+.our-team .card .image .layer i:hover {
+    background-color: var(--primary-color);
+    color: #000;
+    border: 1px solid #000;
+}
+
+/* .our-team .card .image .layer .icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+} */
+
+.our-team .card span {
+    line-height: 1;
+}
+
+
+/* -- -----------------CONTACT----------------- -- */
+
+
+.contact i {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-icon-color);
+    color: var(--bg-button-color);
+    transition: var(--animation-dur);
+}
+
+.contact .inner:hover i {
+    background-color: var(--bg-button-color);
+    color: var(--button-color);
+
+}
+
+.contact p {
+    font-size: .9rem;
+}
+
+.contact textarea,
+.contact input {
+    width: 100%;
+    background-color: var(--bg-icon-color);
+    border: var(--bg-icon-color);
+    font-family: "Poppins", sans-serif;
+
+}
+
+.contact textarea,
+.contact input:focus {
+    outline: none;
+}
+
+.contact textarea {
+    height: 150px;
+    max-height: 200px;
+}
+
+.contact button {
+    background-color: var(--bg-button-color);
+    font-family: "Poppins", sans-serif;
+
+}
+
+.contact button:hover {
+    border-color: #373b3e;
+    color: var(--bg-button-color);
+}
+
+/* -- -----------------FOOTER----------------- -- */
+
+footer {
+    background-color: var(--bg-button-color);
+    font-family: "Poppins", sans-serif;
+}
+
+.linkedin a{
+    text-decoration: none;
+    color: #09c;
+    position: relative;
+}
+.linkedin a::after{
+    content: '';
+    background-color: #09c;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+/* -- -----------------Modal----------------- -- */
+
+
+
+
+.modal {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: zoom-out;
+}
+
+.modal-header .btn-close {
+    color: var(--primary-color);
+    background-image: none;
+    padding: 0;
+    opacity: .5;
+}
+
+.modal-header .btn-close:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+
+.modal-header {
+    border-bottom: none;
+    padding: 1rem 0;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+
+.carousel-control-prev {
+    left: -70%;
+}
+
+.carousel-control-next {
+    right: -70%;
+}
