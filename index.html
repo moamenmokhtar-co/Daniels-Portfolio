@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -100,13 +101,13 @@
         <section class="about section-separating" id="about">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-4 p-2 mb-5 mb-lg-0">
+                    <div data-aos="fade-right" data-aos-duration="2000" class="col-lg-4 p-2 mb-5 mb-lg-0">
                         <div class="image position-relative ">
                             <img class="img-fluid w-100" src="images/hero.jpg" alt="">
                         </div>
                     </div>
 
-                    <div class="col-lg-6 p-2">
+                    <div data-aos="fade-left" data-aos-duration="2000" class="col-lg-6 p-2">
                         <div class="right">
 
                             <div class="about-title">
@@ -175,7 +176,7 @@
             <div class="container text-center">
                 <h3 class="head-title">Services.</h3>
 
-                <div class="row gy-4 pt-5">
+                <div data-aos="zoom-in" data-aos-duration="1500" class="row gy-4 pt-5">
                     <div class="col-lg-4">
                         <div class="ticket p-3 rounded">
                             <div class="inner py-4">
@@ -1016,6 +1017,10 @@
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
